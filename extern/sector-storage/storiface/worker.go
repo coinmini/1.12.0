@@ -25,7 +25,8 @@ type WorkerInfo struct {
 	IgnoreResources bool
 	Resources       WorkerResources
 	TaskResourcesLk sync.Mutex
-	TaskNumber      TaskConfig //限制进程PC1	数量
+	TaskNumber      TaskConfig //限制进程PC1数量
+}
 
 type WorkerResources struct {
 	MemPhysical uint64
