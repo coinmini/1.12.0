@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"sync"
 	"time"
 
 	"github.com/google/uuid"
@@ -150,7 +151,7 @@ type WorkerReturn interface {
 	ReturnFetch(ctx context.Context, callID CallID, err *CallError) error
 }
 
-+//下面都是Dai加的内容
+//下面都是Dai加的内容
 type TaskConfig struct {
 	LimitPC1Count int  //限制的PC1总数
 	RunPC1Count   int  //正在跑的PC1数量
